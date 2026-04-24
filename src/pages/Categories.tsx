@@ -195,16 +195,17 @@ export default function Categories() {
         {isLoading ? (
           <div className="p-12 text-center text-gray-400 text-sm">加载中...</div>
         ) : (
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="bg-gray-50/50 text-gray-500 text-xs uppercase tracking-wider border-b border-gray-100">
-                <th className="px-4 py-4 w-12"></th>
-                <th className="px-6 py-4 font-semibold">分类名称</th>
-                <th className="px-6 py-4 font-semibold">ID</th>
-                <th className="px-6 py-4 font-semibold">产品数量</th>
-                <th className="px-6 py-4 font-semibold">操作</th>
-              </tr>
-            </thead>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse min-w-[600px]">
+              <thead>
+                <tr className="bg-gray-50/50 text-gray-500 text-xs uppercase tracking-wider border-b border-gray-100">
+                  <th className="px-4 py-4 w-12"></th>
+                  <th className="px-6 py-4 font-semibold">分类名称</th>
+                  <th className="px-6 py-4 font-semibold">ID</th>
+                  <th className="px-6 py-4 font-semibold">产品数量</th>
+                  <th className="px-6 py-4 font-semibold">操作</th>
+                </tr>
+              </thead>
             <tbody className="divide-y divide-gray-100">
               {categories.map((cat) => (
                 <tr key={cat.id} className="hover:bg-gray-50/50 transition-colors group">
@@ -216,7 +217,7 @@ export default function Categories() {
                   </td>
                   <td className="px-6 py-4 text-xs font-mono text-gray-400">{cat.id}</td>
                   <td className="px-6 py-4">
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-100">
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-100 whitespace-nowrap">
                       {getCount(cat)} 个产品
                     </span>
                   </td>
@@ -236,7 +237,8 @@ export default function Categories() {
                 </tr>
               ))}
             </tbody>
-          </table>
+            </table>
+          </div>
         )}
       </div>
 

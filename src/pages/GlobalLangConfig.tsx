@@ -214,25 +214,6 @@ export default function GlobalLangConfig() {
         </select>
       </div>
 
-      {/* Stats */}
-      <div className="flex gap-4">
-        <div className="px-4 py-2 bg-blue-50 rounded-lg text-sm">
-          <span className="text-blue-600 font-medium">{filteredKeys.length}</span>
-          <span className="text-gray-500 ml-1">个键</span>
-        </div>
-        {LANGS.map(l => {
-          const filled = filteredKeys.filter(k => translations[l.id]?.[k]?.trim()).length;
-          const pct = filteredKeys.length > 0 ? Math.round((filled / filteredKeys.length) * 100) : 0;
-          return (
-            <div key={l.id} className="px-4 py-2 bg-gray-50 rounded-lg text-sm">
-              <span className="font-medium">{l.label.split(' ')[0]}</span>
-              <span className="text-gray-500 ml-1">{filled}/{filteredKeys.length}</span>
-              <span className="ml-1 text-gray-400">({pct}%)</span>
-            </div>
-          );
-        })}
-      </div>
-
       {/* Translation Table */}
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
         <div className="overflow-x-auto" style={{ maxHeight: '70vh', overflow: 'auto' }}>

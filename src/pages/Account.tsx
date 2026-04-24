@@ -243,15 +243,16 @@ export default function AccountManager({ currentUser }: AccountManagerProps) {
 
       {/* 账号列表 */}
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <table className="w-full">
-          <thead>
-            <tr className="bg-gray-50/50 text-gray-500 text-xs uppercase tracking-wider border-b border-gray-100">
-              <th className="px-6 py-4 font-semibold text-left">用户</th>
-              <th className="px-6 py-4 font-semibold text-left">角色</th>
-              <th className="px-6 py-4 font-semibold text-left">创建时间</th>
-              <th className="px-6 py-4 font-semibold text-right">操作</th>
-            </tr>
-          </thead>
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[600px]">
+            <thead>
+              <tr className="bg-gray-50/50 text-gray-500 text-xs uppercase tracking-wider border-b border-gray-100">
+                <th className="px-6 py-4 font-semibold text-left whitespace-nowrap">用户</th>
+                <th className="px-6 py-4 font-semibold text-left whitespace-nowrap">角色</th>
+                <th className="px-6 py-4 font-semibold text-left whitespace-nowrap">创建时间</th>
+                <th className="px-6 py-4 font-semibold text-right whitespace-nowrap">操作</th>
+              </tr>
+            </thead>
           <tbody className="divide-y divide-gray-100">
             {accounts.map((account) => (
               <tr key={account.id} className="hover:bg-gray-50/50 transition-colors">
@@ -296,7 +297,7 @@ export default function AccountManager({ currentUser }: AccountManagerProps) {
                       <option value="editor">编辑</option>
                     </select>
                   ) : (
-                    <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border ${
+                    <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border whitespace-nowrap ${
                       account.role === 'admin'
                         ? 'bg-purple-50 text-purple-700 border-purple-200'
                         : 'bg-gray-50 text-gray-600 border-gray-200'
@@ -345,6 +346,7 @@ export default function AccountManager({ currentUser }: AccountManagerProps) {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
 
       {/* 删除确认弹窗 */}

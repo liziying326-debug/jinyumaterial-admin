@@ -371,7 +371,7 @@ export default function News() {
           <table className="w-full text-left border-collapse table-fixed">
             <colgroup>
               <col style={{width: '80px'}} />
-              <col />
+              <col style={{width: '300px'}} />
               <col style={{width: '110px'}} />
               <col style={{width: '90px'}} />
               <col style={{width: '90px'}} />

@@ -17,10 +17,10 @@ export default defineConfig(({mode}) => {
     },
     server: {
       port: 3001,
-      // API代理：将 /api 请求代理到 Express API 服务器 (3002)
+      // API代理：将 /api 请求代理到 Express API 服务器 (3006)
       proxy: {
         '/api': {
-          target: 'http://localhost:3002',
+          target: 'http://localhost:3006',
           changeOrigin: true,
           rewrite: (path) => path,
         },

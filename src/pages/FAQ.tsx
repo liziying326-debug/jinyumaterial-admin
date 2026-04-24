@@ -224,7 +224,7 @@ export default function FAQ() {
           <h1 className="text-2xl font-bold text-gray-900">FAQ 管理</h1>
           <p className="text-sm text-gray-500 mt-1">管理网站的常见问题与解答（数据来源：translations.json）。</p>
         </div>
-        <button onClick={() => { setSelectedItem(null); setFaqTab(activeTab); setView('edit'); }} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium flex items-center transition-colors shadow-sm">
+        <button onClick={() => { setSelectedItem(null); setFaqTab(activeTab); setView('edit'); }} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium flex items-center transition-colors shadow-sm whitespace-nowrap">
           <Plus className="w-4 h-4 mr-2" />
           添加 FAQ
         </button>
@@ -232,79 +232,83 @@ export default function FAQ() {
 
       {/* Tab 切换栏 */}
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <div className="flex border-b border-gray-100">
-          {TAB_OPTIONS.map(opt => {
-            const count = faqs.filter(f => f.tab === opt.value).length;
-            const isActive = activeTab === opt.value;
-            return (
-              <button
-                key={opt.value}
-                onClick={() => setActiveTab(opt.value)}
-                className={`flex items-center gap-2 px-6 py-3.5 text-sm font-medium transition-all relative ${
-                  isActive
-                    ? 'text-blue-600'
-                    : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-                }`}
-              >
-                {opt.label}
-                <span className={`inline-flex items-center justify-center min-w-[22px] h-[22px] px-1.5 text-xs font-semibold rounded-full ${
-                  isActive ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'
-                }`}>
-                  {count}
-                </span>
-                {isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-t-full" />
-                )}
-              </button>
-            );
-          })}
-        </div>
+        <div className="overflow-x-auto">
+          <div className="min-w-max">
+            <div className="flex border-b border-gray-100">
+              {TAB_OPTIONS.map(opt => {
+                const count = faqs.filter(f => f.tab === opt.value).length;
+                const isActive = activeTab === opt.value;
+                return (
+                  <button
+                    key={opt.value}
+                    onClick={() => setActiveTab(opt.value)}
+                    className={`flex items-center gap-2 px-6 py-3.5 text-sm font-medium transition-all relative whitespace-nowrap ${
+                      isActive
+                        ? 'text-blue-600'
+                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    {opt.label}
+                    <span className={`inline-flex items-center justify-center min-w-[22px] h-[22px] px-1.5 text-xs font-semibold rounded-full ${
+                      isActive ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'
+                    }`}>
+                      {count}
+                    </span>
+                    {isActive && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-t-full" />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
 
-        {/* FAQ 表格 */}
-        {loading ? (
-          <div className="px-6 py-12 text-center text-gray-400 text-sm">加载中...</div>
-        ) : (
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="bg-gray-50/50 text-gray-500 text-xs uppercase tracking-wider border-b border-gray-100">
-                <th className="px-6 py-4 font-semibold">#</th>
-                <th className="px-6 py-4 font-semibold">问题</th>
-                <th className="px-6 py-4 font-semibold">操作</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100">
-              {filteredFaqs.map((faq, idx) => (
-                <tr key={faq.id} className="hover:bg-gray-50/50 transition-colors group">
-                  <td className="px-6 py-4 text-sm text-gray-400">{idx + 1}</td>
-                  <td className="px-6 py-4">
-                    <div className="text-sm font-bold text-gray-900">{faq.question || '(无标题)'}</div>
-                    <div className="text-xs text-gray-400 mt-0.5 line-clamp-1">{faq.answer.substring(0, 80)}{faq.answer.length > 80 ? '...' : ''}</div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center space-x-2">
-                      <button onClick={() => { setSelectedItem(faq); setView('details'); }} className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" title="查看详情">
-                        <Eye className="w-4 h-4" />
-                      </button>
-                      <button onClick={() => { setSelectedItem(faq); setView('edit'); }} className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" title="编辑">
-                        <Edit className="w-4 h-4" />
-                      </button>
-                      <button onClick={() => setDeleteModal(faq)} className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors" title="删除">
-                        <Trash2 className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-              {filteredFaqs.length === 0 && (
-                <tr>
-                  <td colSpan={3} className="px-6 py-12 text-center text-gray-400 text-sm">
-                    该分类下暂无 FAQ 数据
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        )}
+            {/* FAQ 表格 */}
+            {loading ? (
+              <div className="px-6 py-12 text-center text-gray-400 text-sm">加载中...</div>
+            ) : (
+              <table className="w-full text-left border-collapse min-w-[500px]">
+                <thead>
+                  <tr className="bg-gray-50/50 text-gray-500 text-xs uppercase tracking-wider border-b border-gray-100">
+                    <th className="px-6 py-4 font-semibold whitespace-nowrap">#</th>
+                    <th className="px-6 py-4 font-semibold whitespace-nowrap">问题</th>
+                    <th className="px-6 py-4 font-semibold whitespace-nowrap">操作</th>
+                  </tr>
+                </thead>
+              <tbody className="divide-y divide-gray-100">
+                {filteredFaqs.map((faq, idx) => (
+                  <tr key={faq.id} className="hover:bg-gray-50/50 transition-colors group">
+                    <td className="px-6 py-4 text-sm text-gray-400">{idx + 1}</td>
+                    <td className="px-6 py-4">
+                      <div className="text-sm font-bold text-gray-900">{faq.question || '(无标题)'}</div>
+                      <div className="text-xs text-gray-400 mt-0.5 line-clamp-1">{faq.answer.substring(0, 80)}{faq.answer.length > 80 ? '...' : ''}</div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="flex items-center space-x-2">
+                        <button onClick={() => { setSelectedItem(faq); setView('details'); }} className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" title="查看详情">
+                          <Eye className="w-4 h-4" />
+                        </button>
+                        <button onClick={() => { setSelectedItem(faq); setView('edit'); }} className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" title="编辑">
+                          <Edit className="w-4 h-4" />
+                        </button>
+                        <button onClick={() => setDeleteModal(faq)} className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors" title="删除">
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+                {filteredFaqs.length === 0 && (
+                  <tr>
+                    <td colSpan={3} className="px-6 py-12 text-center text-gray-400 text-sm">
+                      该分类下暂无 FAQ 数据
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+              </table>
+            )}
+          </div>
+        </div>
       </div>
 
       {/* Delete Modal */}
