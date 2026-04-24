@@ -1,0 +1,209 @@
+[
+  {
+    "id": 1,
+    "name": "Sign Board",
+    "desc": "From retail shop fronts to large commercial building signs, our materials provide the structural durability and visual quality needed for professional sign making. PVC foam boards offer lightweight rigidity, while aluminum composite panels deliver a premium metal finish.",
+    "slug": "sign-board",
+    "image": "",
+    "images": [
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
+    ],
+    "langData": {
+      "en": {
+        "name": "Sign Board",
+        "desc": "From retail shop fronts to large commercial building signs, our materials provide the structural durability and visual quality needed for professional sign making. PVC foam boards offer lightweight rigidity, while aluminum composite panels deliver a premium metal finish."
+      },
+      "zh": {
+        "name": "标识牌",
+        "desc": "从零售店面到大型商业建筑标识，我们的材料提供专业标识制作所需的结构耐久性和视觉质量。PVC发泡板重量轻、刚性好，而铝塑板则提供高端金属质感。"
+      },
+      "vi": {
+        "name": "Bảng Biển",
+        "desc": "Từ mặt tiền cửa hàng bán lẻ đến biển hiệu tòa nhà thương mại lớn, vật liệu của chúng tôi cung cấp độ bền cấu trúc và chất lượng hình ảnh cần thiết để làm biển chuyên nghiệp."
+      },
+      "ph": {
+        "name": "Sign Board",
+        "desc": "Mula sa retail shop fronts hanggang sa malalaking commercial building signs, ang aming mga materyales ay nagbibigay ng structural durability at visual quality na kinakailangan para sa professional na paggawa ng sign."
+      }
+    },
+    "materials": [
+      {
+        "id": "self-adhesive-vinyl",
+        "name": "Self Adhesive Vinyl (SAV)",
+        "desc": "High quality Self Adhesive Vinyl (SAV) for advertising and display applications.",
+        "langData": {
+          "en": {
+            "name": "Self Adhesive Vinyl (SAV)",
+            "desc": "High quality Self Adhesive Vinyl (SAV) for advertising and display applications."
+          },
+          "zh": {
+            "name": "",
+            "desc": ""
+          },
+          "vi": {
+            "name": "",
+            "desc": ""
+          },
+          "ph": {
+            "name": "",
+            "desc": ""
+          }
+        }
+      },
+      {
+        "id": "pet-photo-paper",
+        "name": "PET Photo Paper / PP Banner",
+        "desc": "High quality PET Photo Paper / PP Banner for advertising and display applications.",
+        "langData": {
+          "en": {
+            "name": "PET Photo Paper / PP Banner",
+            "desc": "High quality PET Photo Paper / PP Banner for advertising and display applications."
+          },
+          "zh": {
+            "name": "",
+            "desc": ""
+          },
+          "vi": {
+            "name": "",
+            "desc": ""
+          },
+          "ph": {
+            "name": "",
+            "desc": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "digital-printing",
+    "images": [
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80"
+    ],
+    "langData": {
+      "en": {
+        "name": "Digital Printing",
+        "desc": "Digital printing shops require substrates that deliver vibrant color output, consistent ink adhesion, and durability across solvent, eco-solvent, UV, and latex printing technologies. Our printable media covers every major printing process."
+      },
+      "zh": {
+        "name": "数码打印",
+        "desc": "数码打印店需要能提供鲜艳色彩输出、持续墨水附着力和耐久性的基材，适用于溶剂型、环保溶剂型、UV和乳胶打印技术。我们的打印介质覆盖所有主流打印工艺。"
+      },
+      "vi": {
+        "name": "In Kỹ Thuật Số",
+        "desc": "Các cửa hàng in kỹ thuật số yêu cầu chất nền mang lại đầu ra màu sắc rực rỡ, độ bám dính mực nhất quán và độ bền trên nhiều công nghệ in solvent, eco-solvent, UV và latex. Chất liệu in của chúng tôi bao phủ mọi quy trình in chính."
+      },
+      "ph": {
+        "name": "Digital Printing",
+        "desc": "Ang mga digital printing shop ay nangangailangan ng substrates na nagbibigay ng vibrant color output, consistent ink adhesion, at durability sa solvent, eco-solvent, UV, at latex printing technologies."
+      }
+    },
+    "materials": []
+  },
+  {
+    "id": 4,
+    "slug": "outdoor-advertising",
+    "images": [
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80"
+    ],
+    "langData": {
+      "en": {
+        "name": "Outdoor Advertising",
+        "desc": "Outdoor advertising materials face harsh UV exposure, wind loads, rain, temperature cycles, and physical impacts. Our outdoor-grade products are formulated and tested for sustained performance in demanding exterior environments across global climates."
+      },
+      "zh": {
+        "name": "户外广告",
+        "desc": "户外广告材料面临恶劣的紫外线照射、风荷载、雨水、温度循环和物理冲击。我们的户外级产品经过配方设计和测试，可在各种气候条件下在苛刻的室外环境中保持持续性能。"
+      },
+      "vi": {
+        "name": "Quảng Cáo Ngoài Trời",
+        "desc": "Vật liệu quảng cáo ngoài trời phải đối mặt với tia UV khắc nghiệt, tải trọng gió, mưa, chu kỳ nhiệt độ và tác động vật lý. Các sản phẩm cấp ngoài trời của chúng tôi được pha chế và thử nghiệm để đạt hiệu suất bền vững trong các môi trường bên ngoài khắc nghiệt trên toàn cầu."
+      },
+      "ph": {
+        "name": "Outdoor Advertising",
+        "desc": "Ang mga outdoor advertising material ay nakaharap sa mahirap na UV exposure, wind loads, rain, temperature cycles, at physical impacts. Ang aming outdoor-grade products ay formulated at tested para sa sustained performance."
+      }
+    },
+    "materials": []
+  },
+  {
+    "id": 5,
+    "slug": "exhibition-display",
+    "images": [
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80"
+    ],
+    "langData": {
+      "en": {
+        "name": "Exhibition Display",
+        "desc": "Trade shows, exhibitions, and corporate events demand portable, visually impactful display systems. Our display stands and print media combine ease of transport with professional presentation quality for global event professionals."
+      },
+      "zh": {
+        "name": "展览展示",
+        "desc": "贸易展会、展览和企业活动需要便携、视觉冲击力强的展示系统。我们的展示架和印刷介质结合了便于运输和专业展示品质的优点，为全球活动专业人士服务。"
+      },
+      "vi": {
+        "name": "Trưng Bày Triển Lãm",
+        "desc": "Các hội chợ thương mại, triển lãm và sự kiện doanh nghiệp đòi hỏi các hệ thống trưng bày di động, có tác động hình ảnh mạnh. Giá trưng bày và chất liệu in của chúng tôi kết hợp tính dễ vận chuyển với chất lượng trình bày chuyên nghiệp cho các chuyên gia sự kiện toàn cầu."
+      },
+      "ph": {
+        "name": "Exhibition Display",
+        "desc": "Ang trade shows, exhibitions, at corporate events ay nangangailangan ng portable, visually impactful display systems. Ang aming display stands at print media ay nagbibigay ng kadalian ng transport kasama ng professional presentation quality."
+      }
+    },
+    "materials": []
+  },
+  {
+    "id": 1776013547870,
+    "name": "Image Settings",
+    "desc": "Set the product card images to a 1:1 aspect ratio (square). Use object-fit: cover to ensure the images are displayed completely without stretching or distortion. Center the images and keep consistent padding around them.",
+    "slug": "",
+    "image": "",
+    "images": [
+      "/product-images/1_%E5%AE%A4%E5%86%85%E5%86%99%E7%9C%9F%E6%9D%90%E6%96%99_01_42859e.jpg"
+    ],
+    "langData": {
+      "en": {
+        "name": "Image Settings",
+        "desc": "Set the product card images to a 1:1 aspect ratio (square). Use object-fit: cover to ensure the images are displayed completely without stretching or distortion. Center the images and keep consistent padding around them."
+      },
+      "zh": {
+        "name": "",
+        "desc": ""
+      },
+      "vi": {
+        "name": "",
+        "desc": ""
+      },
+      "ph": {
+        "name": "",
+        "desc": ""
+      }
+    },
+    "materials": [
+      {
+        "id": "reflective-sheeting",
+        "name": "Reflective Sheeting",
+        "desc": "High quality Reflective Sheeting for advertising and display applications.",
+        "langData": {
+          "en": {
+            "name": "Reflective Sheeting",
+            "desc": "High quality Reflective Sheeting for advertising and display applications."
+          },
+          "zh": {
+            "name": "",
+            "desc": ""
+          },
+          "vi": {
+            "name": "",
+            "desc": ""
+          },
+          "ph": {
+            "name": "",
+            "desc": ""
+          }
+        }
+      }
+    ]
+  }
+]
